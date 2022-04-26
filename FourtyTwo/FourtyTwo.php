@@ -22,13 +22,16 @@ const DEV_SECRET = "";
 
 	DO NOT TOUCH
 
-	These are the global consts, needed for the app to work
+	These are the consts, needed for the app to work
 
 */
 const API_ENDPOINT = "https://api.intra.42.fr/";
 const AUTHORIZATION_ENDPOINT = "https://api.intra.42.fr/oauth/authorize";
 const TOKEN_ROUTE = "oauth/token";
 const TOKEN_ENDPOINT = "https://api.intra.42.fr/oauth/token";
+
+$GLOBALS["token"] = "";
+$GLOBALS[""] = "";
 
 class FourtyTwo
 {
@@ -41,26 +44,29 @@ class FourtyTwo
 
 	public static function getToken()
 	{
-		$data = array(
-		"grant_type" => "client_credentials"
-		);
-		$result = self::makeRequest(TOKEN_ROUTE, $data, 'POST');
+		if ($GLOBALS["token"] == ""):
+			$data = array(
+			"grant_type" => "client_credentials"
+			);
+			$result = self::makeRequest(TOKEN_ROUTE, $data, 'POST');
 
-		self::$_token = $result->access_token;
-		
+			$GLOBALS["token"] = $result->access_token;
+		endif;
+
+		self::$_token = $GLOBALS["token"];
 		return (self::$_token);
 	}
 
-	public static function makeRequest($url, $data = false, $method = "GET")
+	public static function makeRequest($url, $data = false, $method = "GET", $options = NULL)
 	{
-		$url = "v2/" . $url;
+		$tmp_url = "v2/" . $url;
 		if (empty($data))
 			$data = array("access_token" => self::getToken());
 
 		$data["client_id"] = self::getUid();
 		$data["client_secret"] = self::getPrivate();
 
-		$options = array(
+		$request_options = array(
 		'http' => array(
 			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
 			'method'  => $method,
@@ -68,9 +74,29 @@ class FourtyTwo
 		)
 		);
 
-		$context  = stream_context_create($options);
-		$result = file_get_contents(API_ENDPOINT . $url, false, $context);
-		if ($result === FALSE) { return "error"; }
+		// Handle the options
+		if ($options != NULL)
+		{
+			$options_url = $options->generate();
+
+			if ($options_url != "")
+				if (!str_contains($tmp_url, '?'))
+					$tmp_url .= "?";
+
+			$tmp_url .= $options_url;
+		}
+
+		$context  = stream_context_create($request_options);
+		$result = file_get_contents(API_ENDPOINT . $tmp_url, false, $context);
+
+		if (str_contains($http_response_header[0], "429"))
+		{
+			preg_match_all('!\d+!', $http_response_header[6], $matches);
+			sleep($matches[0][0]);
+			return (self::makeRequest($url, $data, $method, $options));
+		}
+		else if ($result === FALSE)
+			return "error";
 
 		return (json_decode($result));
 	}

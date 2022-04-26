@@ -13,32 +13,23 @@ namespace FourtyTwo;
 class Logtime
 {
 	/**
-	 * @var int $_weekLogtime Logtime for the week
+	 * This method returns the logtime for the given user
+	 * 
+	 * @param int $user_id The ID of the user
+	 * @param object Option The options to pass to this request
+	 * @return int The logtime
 	 */
-	protected	$_weekLogtime = 0;
-
-	/**
-	 * @var int $_dayLogTime Logtime for the day
-	 */
-	protected	$_dayLogtime = 0;
-
-	/**
-	 * The ID must be a valid 42 user ID
-	 */
-	public function __construct($user_id)
+	public static function get($user_id, $options = null)
 	{
-		$this_week = strtotime("this week");
-		$week = date("Y-m-d", $this_week);
+		$request = FourtyTwo::makeRequest("users/" . $user_id . "/locations_stats", false, "GET", $options);
+		$tmp_logtime = 0;
 
-		$tmp = FourtyTwo::makeRequest("users/" . $user_id . "/locations_stats?begin_at=" . $week);
-		foreach ($tmp as $key => $logtime)
-		{
-			if ($key == date("Y-m-d"))
-				$this->_dayLogtime = $this->clockToSeconds($logtime);
+		foreach ($request as $key => $logtime)
+			$tmp_logtime += self::clockToSeconds($logtime);
 
-			$this->_weekLogtime += $this->clockToSeconds($logtime);
-		}
+		return ($tmp_logtime);
 	}
+
 
 	/**
 	 * This function takes a timer that looks like HH:MM:SS and returns the same time but only in seconds
@@ -46,7 +37,7 @@ class Logtime
 	 * @param void
 	 * @return int The number of seconds in the timer given
 	 */
-	protected function clockToSeconds($logtime)
+	protected static function clockToSeconds($logtime)
 	{
 		$time = 0;
 		$logtime = explode(":", $logtime);

@@ -53,14 +53,29 @@ class User
 	protected	$_groups;
 
 	/**
-	 * @var class Logtime Logtime Class containing the last 4 months of logtime for the user
+	 * @var int $_week_logtime The logtime of the week
 	 */
-	protected	$_logtime;
+	protected	$_week_logtime;
 
 	/**
-	 * @var 
+	 * @var int $_day_logtime The logtime of the day
 	 */
-	protected	$_corrections;
+	protected	$_day_logtime;
+
+	/**
+	 * @var	array $_corrections_as_corrector An array containing all of the corrections as corrector for the user
+	 */
+	protected	$_corrections_as_corrector;
+
+	/**
+	 * @var array $_corrections_as_corrected An array containing all of the corrections as corrected for the user
+	 */
+	protected	$_corrections_as_corrected;
+
+	/**
+	 * @var array $events An array containing the events a user went to
+	 */
+	protected	$_events;
 
 	/**
 	*	The $id must be the ID of the user
@@ -88,27 +103,84 @@ class User
 	}
 
 	/**
-	 * Get the logtime info of a user
+	 * Get the events that a user went to
 	 * 
-	 * @param void
-	 * @return object Logtime Returns a Logtime object for the current user
+	 * @param array $options The options for the request
+	 * @return array The events that a user went to
 	 */
-	public function getLogtime()
+	public function getEvents($options = null)
 	{
-		if (!$this->_logtime)
-			$this->_logtime = new Logtime($this->_id);
+		if (!$this->_events)
+			$this->_events = Event::getEventsofUser($this->_id, $options);
 	}
 
 	/**
-	 * Get the corrections of a user
+	 * Get the projects of the user
 	 * 
 	 * @param void
+	 * @return array The projects of the user
+	 */
+	public function getProjects()
+	{
+		return (Project::getUserProjects($this->_id));
+	}
+
+	/**
+	 * Get the logtime of the day for the user
+	 * 
+	 * @param void
+	 * @return int The logtime of the user for the day
+	 */
+	public function getLogtime()
+	{
+		$options = new Option;
+		$options->addCustom("begin_at", date("Y-m-d"));
+
+		if (!$this->_day_logtime)
+			$this->_day_logtime = Logtime::get($this->_id, $options);
+
+		return ($this->_day_logtime);
+	}
+
+	/**
+	 * Get the logtime of the week for the user
+	 * 
+	 * @param void
+	 * @return int The logtime of the user for the week
+	 */
+	public function getWeekLogtime()
+	{
+		$options = new Option;
+		$options->addCustom("begin_at", date("Y-m-d", strtotime("monday this week")));
+
+		if (!$this->_week_logtime)
+			$this->_week_logtime = Logtime::get($this->_id, $options);
+		
+		return ($this->_week_logtime);
+	}
+
+	/**
+	 * Get the corrections of a user where he is the corrector
+	 * 
+	 * @param array $options Options that will be passed to the makeRequest call
 	 * @return array An array with all the last corrections of a user
 	 */
-	public function getCorrections()
+	public function getCorrectionsAsCorrector($options = null)
 	{
-		if (!$this->_corrections)
-			$this->_corrections = Correction::getCorrections($this->_id);
+		if (!$this->_corrections_as_corrector)
+			$this->_corrections_as_corrector = Correction::getCorrectionsAsCorrector($this->_id, $options);
+	}
+
+	/**
+	 * Get the corrections of a user where he is the corrected
+	 * 
+	 * @param array $options Options that will be passed to the makeRequest call
+	 * @return array An array with all the last corrections of a user
+	 */
+	public function getCorrectionsAsCorrected($options = null)
+	{
+		if (!$this->_corrections_as_corrected)
+			$this->_corrections_as_corrected = Correction::getCorrectionsAsCorrected($this->_id, $options);
 	}
 
 	/**
