@@ -16,16 +16,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/FourtyTwo-Autoloader.html#method_autoload"
         },                {
-            "fqsen": "\\FourtyTwo\\Events",
-            "name": "Events",
-            "summary": "",
-            "url": "classes/FourtyTwo-Events.html"
-        },                {
-            "fqsen": "\\FourtyTwo\\Events\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/FourtyTwo-Events.html#method___construct"
-        },                {
             "fqsen": "\\FourtyTwo\\REDIRECT_URI",
             "name": "REDIRECT_URI",
             "summary": "",
@@ -131,25 +121,15 @@ Search.appendIndex(
             "summary": "Class\u0020Logtime\u0020\u003A\u0020represents\u0020the\u0020logtime\u0020of\u0020a\u0020user\u0020object",
             "url": "classes/FourtyTwo-Logtime.html"
         },                {
-            "fqsen": "\\FourtyTwo\\Logtime\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "The\u0020ID\u0020must\u0020be\u0020a\u0020valid\u002042\u0020user\u0020ID",
-            "url": "classes/FourtyTwo-Logtime.html#method___construct"
+            "fqsen": "\\FourtyTwo\\Logtime\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "This\u0020method\u0020returns\u0020the\u0020logtime\u0020for\u0020the\u0020given\u0020user",
+            "url": "classes/FourtyTwo-Logtime.html#method_get"
         },                {
             "fqsen": "\\FourtyTwo\\Logtime\u003A\u003AclockToSeconds\u0028\u0029",
             "name": "clockToSeconds",
             "summary": "This\u0020function\u0020takes\u0020a\u0020timer\u0020that\u0020looks\u0020like\u0020HH\u003AMM\u003ASS\u0020and\u0020returns\u0020the\u0020same\u0020time\u0020but\u0020only\u0020in\u0020seconds",
             "url": "classes/FourtyTwo-Logtime.html#method_clockToSeconds"
-        },                {
-            "fqsen": "\\FourtyTwo\\Logtime\u003A\u003A\u0024_weekLogtime",
-            "name": "_weekLogtime",
-            "summary": "",
-            "url": "classes/FourtyTwo-Logtime.html#property__weekLogtime"
-        },                {
-            "fqsen": "\\FourtyTwo\\Logtime\u003A\u003A\u0024_dayLogtime",
-            "name": "_dayLogtime",
-            "summary": "",
-            "url": "classes/FourtyTwo-Logtime.html#property__dayLogtime"
         },                {
             "fqsen": "\\FourtyTwo\\User",
             "name": "User",
@@ -160,6 +140,36 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "The\u0020\u0024id\u0020must\u0020be\u0020the\u0020ID\u0020of\u0020the\u0020user",
             "url": "classes/FourtyTwo-User.html#method___construct"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003AgetEvents\u0028\u0029",
+            "name": "getEvents",
+            "summary": "Get\u0020the\u0020events\u0020that\u0020a\u0020user\u0020went\u0020to",
+            "url": "classes/FourtyTwo-User.html#method_getEvents"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003AgetProjects\u0028\u0029",
+            "name": "getProjects",
+            "summary": "Get\u0020the\u0020projects\u0020of\u0020the\u0020user",
+            "url": "classes/FourtyTwo-User.html#method_getProjects"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003AgetLogtime\u0028\u0029",
+            "name": "getLogtime",
+            "summary": "Get\u0020the\u0020logtime\u0020of\u0020the\u0020day\u0020for\u0020the\u0020user",
+            "url": "classes/FourtyTwo-User.html#method_getLogtime"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003AgetWeekLogtime\u0028\u0029",
+            "name": "getWeekLogtime",
+            "summary": "Get\u0020the\u0020logtime\u0020of\u0020the\u0020week\u0020for\u0020the\u0020user",
+            "url": "classes/FourtyTwo-User.html#method_getWeekLogtime"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003AgetCorrectionsAsCorrector\u0028\u0029",
+            "name": "getCorrectionsAsCorrector",
+            "summary": "Get\u0020the\u0020corrections\u0020of\u0020a\u0020user\u0020where\u0020he\u0020is\u0020the\u0020corrector",
+            "url": "classes/FourtyTwo-User.html#method_getCorrectionsAsCorrector"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003AgetCorrectionsAsCorrected\u0028\u0029",
+            "name": "getCorrectionsAsCorrected",
+            "summary": "Get\u0020the\u0020corrections\u0020of\u0020a\u0020user\u0020where\u0020he\u0020is\u0020the\u0020corrected",
+            "url": "classes/FourtyTwo-User.html#method_getCorrectionsAsCorrected"
         },                {
             "fqsen": "\\FourtyTwo\\User\u003A\u003AgetEmail\u0028\u0029",
             "name": "getEmail",
@@ -241,10 +251,230 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/FourtyTwo-User.html#property__groups"
         },                {
-            "fqsen": "\\FourtyTwo\\User\u003A\u003A\u0024_logtime",
-            "name": "_logtime",
+            "fqsen": "\\FourtyTwo\\User\u003A\u003A\u0024_week_logtime",
+            "name": "_week_logtime",
             "summary": "",
-            "url": "classes/FourtyTwo-User.html#property__logtime"
+            "url": "classes/FourtyTwo-User.html#property__week_logtime"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003A\u0024_day_logtime",
+            "name": "_day_logtime",
+            "summary": "",
+            "url": "classes/FourtyTwo-User.html#property__day_logtime"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003A\u0024_corrections_as_corrector",
+            "name": "_corrections_as_corrector",
+            "summary": "",
+            "url": "classes/FourtyTwo-User.html#property__corrections_as_corrector"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003A\u0024_corrections_as_corrected",
+            "name": "_corrections_as_corrected",
+            "summary": "",
+            "url": "classes/FourtyTwo-User.html#property__corrections_as_corrected"
+        },                {
+            "fqsen": "\\FourtyTwo\\User\u003A\u003A\u0024_events",
+            "name": "_events",
+            "summary": "",
+            "url": "classes/FourtyTwo-User.html#property__events"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction",
+            "name": "Correction",
+            "summary": "Class\u0020Correction\u0020\u003A\u0020represents\u0020a\u0020correction\u0020object",
+            "url": "classes/FourtyTwo-Correction.html"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003Acast\u0028\u0029",
+            "name": "cast",
+            "summary": "",
+            "url": "classes/FourtyTwo-Correction.html#method_cast"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003AgetCorrectionsAsCorrector\u0028\u0029",
+            "name": "getCorrectionsAsCorrector",
+            "summary": "R\u00E9cup\u00E8re\u0020les\u0020corrections\u0020d\u0027un\u0020utilisateur\u0020en\u0020tant\u0020que\u0020correcteur",
+            "url": "classes/FourtyTwo-Correction.html#method_getCorrectionsAsCorrector"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003AgetCorrectionsAsCorrected\u0028\u0029",
+            "name": "getCorrectionsAsCorrected",
+            "summary": "This\u0020method\u0020get\u0020all\u0020of\u0020the\u0020corrections\u0020of\u0020a\u0020given\u0020user\u0020where\u0020he\u0020is\u0020the\u0020one\u0020being\u0020corrected",
+            "url": "classes/FourtyTwo-Correction.html#method_getCorrectionsAsCorrected"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003AgetCorrectedLogin\u0028\u0029",
+            "name": "getCorrectedLogin",
+            "summary": "Get\u0020the\u0020Login\u0020of\u0020the\u0020corrected\u0020user",
+            "url": "classes/FourtyTwo-Correction.html#method_getCorrectedLogin"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003AgetProjectName\u0028\u0029",
+            "name": "getProjectName",
+            "summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020corrected\u0020project",
+            "url": "classes/FourtyTwo-Correction.html#method_getProjectName"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003AgetScale\u0028\u0029",
+            "name": "getScale",
+            "summary": "Get\u0020the\u0020final\u0020scale\u0020of\u0020the\u0020correction",
+            "url": "classes/FourtyTwo-Correction.html#method_getScale"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003AgetFilledAtDate\u0028\u0029",
+            "name": "getFilledAtDate",
+            "summary": "Get\u0020the\u0020date\u0020at\u0020which\u0020the\u0020correction\u0020has\u0020been\u0020filled",
+            "url": "classes/FourtyTwo-Correction.html#method_getFilledAtDate"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003A\u0024_correcteds",
+            "name": "_correcteds",
+            "summary": "",
+            "url": "classes/FourtyTwo-Correction.html#property__correcteds"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003A\u0024_project",
+            "name": "_project",
+            "summary": "",
+            "url": "classes/FourtyTwo-Correction.html#property__project"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003A\u0024_scale",
+            "name": "_scale",
+            "summary": "",
+            "url": "classes/FourtyTwo-Correction.html#property__scale"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003A\u0024_filled_at",
+            "name": "_filled_at",
+            "summary": "",
+            "url": "classes/FourtyTwo-Correction.html#property__filled_at"
+        },                {
+            "fqsen": "\\FourtyTwo\\Correction\u003A\u003A\u0024_url",
+            "name": "_url",
+            "summary": "",
+            "url": "classes/FourtyTwo-Correction.html#property__url"
+        },                {
+            "fqsen": "\\FourtyTwo\\Event",
+            "name": "Event",
+            "summary": "Class\u0020Event\u0020\u003A\u0020represents\u0020an\u0020event\u0020object",
+            "url": "classes/FourtyTwo-Event.html"
+        },                {
+            "fqsen": "\\FourtyTwo\\Event\u003A\u003Acast\u0028\u0029",
+            "name": "cast",
+            "summary": "Cast\u0020from\u0020a\u0020stdClass\u0020Event\u0020object\u0020given\u0020by\u0020the\u0020Intra",
+            "url": "classes/FourtyTwo-Event.html#method_cast"
+        },                {
+            "fqsen": "\\FourtyTwo\\Event\u003A\u003AgetEventsofUser\u0028\u0029",
+            "name": "getEventsofUser",
+            "summary": "Get\u0020the\u0020list\u0020of\u0020all\u0020the\u0020events\u0020for\u0020a\u0020given\u0020user",
+            "url": "classes/FourtyTwo-Event.html#method_getEventsofUser"
+        },                {
+            "fqsen": "\\FourtyTwo\\Event\u003A\u003A\u0024_id",
+            "name": "_id",
+            "summary": "",
+            "url": "classes/FourtyTwo-Event.html#property__id"
+        },                {
+            "fqsen": "\\FourtyTwo\\Event\u003A\u003A\u0024_name",
+            "name": "_name",
+            "summary": "",
+            "url": "classes/FourtyTwo-Event.html#property__name"
+        },                {
+            "fqsen": "\\FourtyTwo\\Event\u003A\u003A\u0024_begin_at",
+            "name": "_begin_at",
+            "summary": "",
+            "url": "classes/FourtyTwo-Event.html#property__begin_at"
+        },                {
+            "fqsen": "\\FourtyTwo\\Event\u003A\u003A\u0024_end_at",
+            "name": "_end_at",
+            "summary": "",
+            "url": "classes/FourtyTwo-Event.html#property__end_at"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option",
+            "name": "Option",
+            "summary": "Class\u0020Option\u0020\u003A\u0020represents\u0020an\u0020option\u0020object\u0020that\u0020can\u0020be\u0020passed\u0020to\u0020the\u0020makeRequest\u0020method",
+            "url": "classes/FourtyTwo-Option.html"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003Agenerate\u0028\u0029",
+            "name": "generate",
+            "summary": "This\u0020method\u0020generates\u0020a\u0020url\u0020friendly\u0020string\u0020that\u0020can\u0020be\u0020appended\u0020on\u0020a\u0020request\u0020route",
+            "url": "classes/FourtyTwo-Option.html#method_generate"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003AaddCustom\u0028\u0029",
+            "name": "addCustom",
+            "summary": "This\u0020method\u0020adds\u0020a\u0020custom\u0020rule",
+            "url": "classes/FourtyTwo-Option.html#method_addCustom"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003AaddSort\u0028\u0029",
+            "name": "addSort",
+            "summary": "This\u0020method\u0020adds\u0020a\u0020sorting\u0020rule.",
+            "url": "classes/FourtyTwo-Option.html#method_addSort"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003AaddRange\u0028\u0029",
+            "name": "addRange",
+            "summary": "This\u0020method\u0020adds\u0020a\u0020range\u0020rule",
+            "url": "classes/FourtyTwo-Option.html#method_addRange"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003AaddFilter\u0028\u0029",
+            "name": "addFilter",
+            "summary": "This\u0020method\u0020adds\u0020a\u0020filter\u0020rule",
+            "url": "classes/FourtyTwo-Option.html#method_addFilter"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003A\u0024_sort",
+            "name": "_sort",
+            "summary": "",
+            "url": "classes/FourtyTwo-Option.html#property__sort"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003A\u0024_range",
+            "name": "_range",
+            "summary": "",
+            "url": "classes/FourtyTwo-Option.html#property__range"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003A\u0024_filter",
+            "name": "_filter",
+            "summary": "",
+            "url": "classes/FourtyTwo-Option.html#property__filter"
+        },                {
+            "fqsen": "\\FourtyTwo\\Option\u003A\u003A\u0024_custom",
+            "name": "_custom",
+            "summary": "",
+            "url": "classes/FourtyTwo-Option.html#property__custom"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project",
+            "name": "Project",
+            "summary": "Class\u0020Project\u0020\u003A\u0020represents\u0020an\u0020project\u0020object",
+            "url": "classes/FourtyTwo-Project.html"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project\u003A\u003Acast\u0028\u0029",
+            "name": "cast",
+            "summary": "This\u0020method\u0020casts\u0020a\u0020stdClass\u0020object\u0020to\u0020a\u0020Project\u0020object",
+            "url": "classes/FourtyTwo-Project.html#method_cast"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project\u003A\u003AgetUserProjects\u0028\u0029",
+            "name": "getUserProjects",
+            "summary": "Get\u0020the\u0020projects\u0020of\u0020a\u0020user",
+            "url": "classes/FourtyTwo-Project.html#method_getUserProjects"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project\u003A\u003A\u0024_id",
+            "name": "_id",
+            "summary": "",
+            "url": "classes/FourtyTwo-Project.html#property__id"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project\u003A\u003A\u0024_name",
+            "name": "_name",
+            "summary": "",
+            "url": "classes/FourtyTwo-Project.html#property__name"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project\u003A\u003A\u0024_final_mark",
+            "name": "_final_mark",
+            "summary": "",
+            "url": "classes/FourtyTwo-Project.html#property__final_mark"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project\u003A\u003A\u0024_current_team_id",
+            "name": "_current_team_id",
+            "summary": "",
+            "url": "classes/FourtyTwo-Project.html#property__current_team_id"
+        },                {
+            "fqsen": "\\FourtyTwo\\Project\u003A\u003A\u0024_corrected",
+            "name": "_corrected",
+            "summary": "",
+            "url": "classes/FourtyTwo-Project.html#property__corrected"
+        },                {
+            "fqsen": "\\FourtyTwo\\Team",
+            "name": "Team",
+            "summary": "Class\u0020Team\u0020\u003A\u0020represents\u0020an\u0020team\u0020object",
+            "url": "classes/FourtyTwo-Team.html"
+        },                {
+            "fqsen": "\\FourtyTwo\\Team\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Method\u0020to\u0020get\u0020a\u0020team",
+            "url": "classes/FourtyTwo-Team.html#method_get"
         },                {
             "fqsen": "\\",
             "name": "\\",

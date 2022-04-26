@@ -73,7 +73,7 @@ class User
 	protected	$_corrections_as_corrected;
 
 	/**
-	 * @var array $events An array containing the events a user went to
+	 * @var array $_events An array containing the events a user went to
 	 */
 	protected	$_events;
 
@@ -117,12 +117,12 @@ class User
 	/**
 	 * Get the projects of the user
 	 * 
-	 * @param void
+	 * @param object Option An Option object containing all the options for the call
 	 * @return array The projects of the user
 	 */
-	public function getProjects()
+	public function getProjects($options = null)
 	{
-		return (Project::getUserProjects($this->_id));
+		return (Project::getUserProjects($this->_id, $options));
 	}
 
 	/**

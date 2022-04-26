@@ -74,6 +74,26 @@
     <a href="packages/User.html" class="">User</a>
 </h4>
 
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Correction.html" class="">Correction</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Event.html" class="">Event</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Option.html" class="">Option</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Project.html" class="">Project</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Team.html" class="">Team</a>
+</h4>
+
                         </section>
             
     <section class="phpdocumentor-sidebar__category">
@@ -150,6 +170,27 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/FourtyTwo-User.html#property__corrections_as_corrected">$_corrections_as_corrected</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/FourtyTwo-User.html#property__corrections_as_corrector">$_corrections_as_corrector</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/FourtyTwo-User.html#property__day_logtime">$_day_logtime</a>
+    <span>
+                        &nbsp;: int            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/FourtyTwo-User.html#property__displayname">$_displayname</a>
     <span>
                         &nbsp;: string            </span>
@@ -160,6 +201,13 @@
     <a href="classes/FourtyTwo-User.html#property__email">$_email</a>
     <span>
                         &nbsp;: string            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/FourtyTwo-User.html#property__events">$_events</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd></dd>
 
@@ -206,9 +254,9 @@
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="classes/FourtyTwo-User.html#property__logtime">$_logtime</a>
+    <a href="classes/FourtyTwo-User.html#property__week_logtime">$_week_logtime</a>
     <span>
-                        &nbsp;: <abbr title="\FourtyTwo\class">class</abbr>            </span>
+                        &nbsp;: int            </span>
 </dt>
 <dd></dd>
 
@@ -227,6 +275,20 @@
 <dd>Get the users connection status on a campus</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/FourtyTwo-User.html#method_getCorrectionsAsCorrected">getCorrectionsAsCorrected()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Get the corrections of a user where he is the corrected</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/FourtyTwo-User.html#method_getCorrectionsAsCorrector">getCorrectionsAsCorrector()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Get the corrections of a user where he is the corrector</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/FourtyTwo-User.html#method_getDisplayname">getDisplayname()</a>
     <span>
                                 &nbsp;: string    </span>
@@ -239,6 +301,13 @@
                                 &nbsp;: string    </span>
 </dt>
 <dd>Get the email of the user</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/FourtyTwo-User.html#method_getEvents">getEvents()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Get the events that a user went to</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/FourtyTwo-User.html#method_getGroups">getGroups()</a>
@@ -275,6 +344,27 @@
 </dt>
 <dd>Get the login of the user</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/FourtyTwo-User.html#method_getLogtime">getLogtime()</a>
+    <span>
+                                &nbsp;: int    </span>
+</dt>
+<dd>Get the logtime of the day for the user</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/FourtyTwo-User.html#method_getProjects">getProjects()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Get the projects of the user</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/FourtyTwo-User.html#method_getWeekLogtime">getWeekLogtime()</a>
+    <span>
+                                &nbsp;: int    </span>
+</dt>
+<dd>Get the logtime of the week for the user</dd>
+
         </dl>
 
 
@@ -287,6 +377,108 @@
             Properties
             <a href="classes/FourtyTwo-User.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property__corrections_as_corrected">
+        $_corrections_as_corrected
+        <a href="classes/FourtyTwo-User.html#property__corrections_as_corrected" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">73</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$_corrections_as_corrected</span>
+    </code>
+
+    
+        <section class="phpdocumentor-description"><p>An array containing all of the corrections as corrected for the user</p>
+</section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property__corrections_as_corrector">
+        $_corrections_as_corrector
+        <a href="classes/FourtyTwo-User.html#property__corrections_as_corrector" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">68</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$_corrections_as_corrector</span>
+    </code>
+
+    
+        <section class="phpdocumentor-description"><p>An array containing all of the corrections as corrector for the user</p>
+</section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property__day_logtime">
+        $_day_logtime
+        <a href="classes/FourtyTwo-User.html#property__day_logtime" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">63</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$_day_logtime</span>
+    </code>
+
+    
+        <section class="phpdocumentor-description"><p>The logtime of the day</p>
+</section>
+
+    
+
+</article>
                     <article
         class="
             phpdocumentor-element
@@ -350,6 +542,40 @@
 
     
         <section class="phpdocumentor-description"><p>User's Email</p>
+</section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property__events">
+        $_events
+        <a href="classes/FourtyTwo-User.html#property__events" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">78</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$_events</span>
+    </code>
+
+    
+        <section class="phpdocumentor-description"><p>An array containing the events a user went to</p>
 </section>
 
     
@@ -566,9 +792,9 @@
             -protected
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property__logtime">
-        $_logtime
-        <a href="classes/FourtyTwo-User.html#property__logtime" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property__week_logtime">
+        $_week_logtime
+        <a href="classes/FourtyTwo-User.html#property__week_logtime" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
@@ -582,12 +808,12 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type"><abbr title="\FourtyTwo\class">class</abbr></span>
-    <span class="phpdocumentor-signature__name">$_logtime</span>
+        <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$_week_logtime</span>
     </code>
 
     
-        <section class="phpdocumentor-description"><p>Logtime Logtime Class containing the last 4 months of logtime for the user</p>
+        <section class="phpdocumentor-description"><p>The logtime of the week</p>
 </section>
 
     
@@ -613,7 +839,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 
     </aside>
 
@@ -657,7 +883,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">159</span>
+    <span class="phpdocumentor-element-found-in__line">258</span>
 
     </aside>
 
@@ -685,6 +911,100 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getCorrectionsAsCorrected">
+        getCorrectionsAsCorrected()
+        <a href="classes/FourtyTwo-User.html#method_getCorrectionsAsCorrected" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">180</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get the corrections of a user where he is the corrected</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getCorrectionsAsCorrected</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Options that will be passed to the makeRequest call</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>An array with all the last corrections of a user</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getCorrectionsAsCorrector">
+        getCorrectionsAsCorrector()
+        <a href="classes/FourtyTwo-User.html#method_getCorrectionsAsCorrector" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">168</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get the corrections of a user where he is the corrector</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getCorrectionsAsCorrector</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Options that will be passed to the makeRequest call</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>An array with all the last corrections of a user</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getDisplayname">
         getDisplayname()
         <a href="classes/FourtyTwo-User.html#method_getDisplayname" class="headerlink"><i class="fas fa-link"></i></a>
@@ -692,7 +1012,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">126</span>
+    <span class="phpdocumentor-element-found-in__line">225</span>
 
     </aside>
 
@@ -727,7 +1047,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 
     </aside>
 
@@ -755,6 +1075,53 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getEvents">
+        getEvents()
+        <a href="classes/FourtyTwo-User.html#method_getEvents" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">111</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get the events that a user went to</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getEvents</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The options for the request</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The events that a user went to</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getGroups">
         getGroups()
         <a href="classes/FourtyTwo-User.html#method_getGroups" class="headerlink"><i class="fas fa-link"></i></a>
@@ -762,7 +1129,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">148</span>
+    <span class="phpdocumentor-element-found-in__line">247</span>
 
     </aside>
 
@@ -797,7 +1164,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">104</span>
+    <span class="phpdocumentor-element-found-in__line">203</span>
 
     </aside>
 
@@ -832,7 +1199,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">137</span>
+    <span class="phpdocumentor-element-found-in__line">236</span>
 
     </aside>
 
@@ -867,7 +1234,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">170</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 
     </aside>
 
@@ -902,7 +1269,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">115</span>
+    <span class="phpdocumentor-element-found-in__line">214</span>
 
     </aside>
 
@@ -920,6 +1287,122 @@
     <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The login of the user</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getLogtime">
+        getLogtime()
+        <a href="classes/FourtyTwo-User.html#method_getLogtime" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">134</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get the logtime of the day for the user</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getLogtime</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The logtime of the user for the day</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getProjects">
+        getProjects()
+        <a href="classes/FourtyTwo-User.html#method_getProjects" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">123</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get the projects of the user</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getProjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The projects of the user</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getWeekLogtime">
+        getWeekLogtime()
+        <a href="classes/FourtyTwo-User.html#method_getWeekLogtime" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="User.php"><a href="files/user.html"><abbr title="User.php">User.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">151</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get the logtime of the week for the user</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getWeekLogtime</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The logtime of the user for the week</p>
 </section>
 
     

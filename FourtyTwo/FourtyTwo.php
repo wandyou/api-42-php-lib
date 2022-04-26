@@ -86,6 +86,8 @@ class FourtyTwo
 			$tmp_url .= $options_url;
 		}
 
+		var_dump($tmp_url);
+
 		$context  = stream_context_create($request_options);
 		$result = file_get_contents(API_ENDPOINT . $tmp_url, false, $context);
 
